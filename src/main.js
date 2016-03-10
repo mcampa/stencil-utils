@@ -13,7 +13,7 @@ export default StencilUtils;
 
 /* global define */
 (function(root) {
-    if (typeof define === 'function' && define.amd) {
+    if (typeof define === 'function' && define.amd && root) {
         define(function() {
             return (root.stencilUtils = StencilUtils);
         });
