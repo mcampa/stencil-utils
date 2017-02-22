@@ -74,6 +74,10 @@ export default function (url, opts, callback) {
         url,
         contentType: options.requestOptions.formData ? false : 'application/x-www-form-urlencoded; charset=UTF-8',
         processData: !options.requestOptions.formData,
+        crossDomain: true,
+        xhrFields: {
+            withCredentials: true,
+        },
         success: (response) => {
             let ret;
             const content = options.remote ? response.content : response;
